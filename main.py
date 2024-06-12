@@ -55,6 +55,23 @@ while True:
     ShowTable()
     time.sleep(1)
 
+    #Checks game win/lose/tie
+    if (ListStoredValues[0] == ListStoredValues[1] == ListStoredValues[2] == 1) or (ListStoredValues[3] == ListStoredValues[4] == ListStoredValues[5] == 1)\
+    or (ListStoredValues[6] == ListStoredValues[7] == ListStoredValues[8] == 1) or (ListStoredValues[0] == ListStoredValues[4] == ListStoredValues[8] == 1)\
+    or (ListStoredValues[0] == ListStoredValues[3] == ListStoredValues[6] == 1) or (ListStoredValues[1] == ListStoredValues[4] == ListStoredValues[7] == 1)\
+    or (ListStoredValues[2] == ListStoredValues[5] == ListStoredValues[8] == 1) or (ListStoredValues[2] == ListStoredValues[4] == ListStoredValues[6] == 1):
+        print("\nX WINS!")
+        print("\nThank You for playing the game!")
+        break
+
+    if (ListStoredValues[0] == ListStoredValues[1] == ListStoredValues[2] == -1) or (ListStoredValues[3] == ListStoredValues[4] == ListStoredValues[5] == -1)\
+    or (ListStoredValues[6] == ListStoredValues[7] == ListStoredValues[8] == -1) or (ListStoredValues[0] == ListStoredValues[4] == ListStoredValues[8] == -1)\
+    or (ListStoredValues[0] == ListStoredValues[3] == ListStoredValues[6] == -1) or (ListStoredValues[1] == ListStoredValues[4] == ListStoredValues[7] == -1)\
+    or (ListStoredValues[2] == ListStoredValues[5] == ListStoredValues[8] == -1) or (ListStoredValues[2] == ListStoredValues[4] == ListStoredValues[6] == -1):
+        print("\nO WINS!")
+        print("\nThank You for playing the game!")
+        break
+
     #Execution of O takes place now
     print("\nIt is O's turn")
     while True:
