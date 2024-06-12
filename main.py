@@ -78,6 +78,7 @@ while True:
         position = int(input(f"Enter the position, among the following given, at which you want to enter {showPossibleSpots()}: "))
         if position in showPossibleSpots():
             break
+        print("Enter correct number!")
     
     ListStoredValues[position - 1] = -1
     ShowTable()
